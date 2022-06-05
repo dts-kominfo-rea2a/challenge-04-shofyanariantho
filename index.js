@@ -8,7 +8,18 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = (data, indexData) => {
+  let hasil = [];
+
+  for (counter = 0; counter < data.length; counter++) {
+    hasil.push(Date.parse(data[counter]) / 1000);
+  }
+
+  if (isNaN(indexData)) {
+    return hasil.sort().join("-");
+  }
+  return hasil[indexData].toString();
+};
 
 // ! JANGAN DIMODIFIKASI
 (() => {
